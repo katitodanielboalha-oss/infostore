@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>inforStore — Modern UI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+<style>
+/* ---------------------- PALETA ----------------------- */
+:root {
+    --bg-dark: #422473;
+    --card-dark: #1a1128;
+    --card-light: #241536;
+    --primary: #27d07d;
+    --text-light: #e5e5e5;
+    --text-muted: #c8c8c8;
+    --gradient: linear-gradient(135deg, #3a1b78, #120723);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: "Inter", sans-serif;
+}
+
+/* ---------------------- NAVBAR ----------------------- */
+.navbar {
+    background: var(--card-dark);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-link {
+    color: #ccc !important;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* ---------------------- HERO ----------------------- */
+.hero {
+    padding: 90px 20px;
+    text-align: left;
+    background: var(--gradient);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    max-width: 700px;
+}
+.hero span {
+    color: var(--primary);
+}
+.hero p {
+    max-width: 520px;
+    margin-top: 15px;
+    color: var(--text-muted);
+}
+
+.btn-main {
+    background: var(--primary);
+    border: none;
+    padding: 14px 32px;
+    color: #000;
+    font-weight: 700;
+    border-radius: 8px;
+}
+.btn-outline-custom {
+    border: 2px solid var(--text-light);
+    padding: 14px 32px;
+    color: var(--text-light);
+    border-radius: 8px;
+    font-weight: 600;
+    background: transparent;
+}
+.btn-outline-custom:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ---------------------- CARROSSEL ----------------------- */
+.carousel-modern {
+    margin-top: -40px;
+    background: var(--card-light);
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 5000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* ---------------------- SOBRE ----------------------- */
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    border-left: 5px solid var(--primary);
+    padding-left: 12px;
+}
+
+.sobre-card {
+    background: var(--card-dark);
+    padding: 30px;
+    border-radius: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ---------------------- BENEFÍCIOS ----------------------- */
+.beneficio {
+    text-align: center;
+    padding: 20px;
+}
+.beneficio i {
+    font-size: 38px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* ---------------------- SERVIÇOS ----------------------- */
+.serv-card {
+    background: var(--card-light);
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+    color: var(--text-light);
+    box-shadow: 0 4px 20px rgba(5, 4, 4, 0.25);
+    transition: 0.4s;
+}
+.serv-card:hover {
+    transform: translateY(-6px);
+}
+.serv-card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+.serv-card button {
+    background: var(--primary);
+    border: none;
+    padding: 10px 22px;
+    font-weight: bold;
+    color: #0f0606;
+    border-radius: 10px;
+}
+
+/* ---------------------- FOOTER ----------------------- */
+footer {
+    margin-top: 50px;
+    background: var(--card-dark);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <img src="InGSite/logo topo.png"> <a class="navbar-brand text-light fw-bold" href="#">infoStore</a>
+
+        <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navmenu" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero container-fluid">
+    <div class="container">
+        <h1>Sua Solução Completa em <span>Informática e Tecnologia</span></h1>
+        <p>Levamos inovação, desempenho e segurança para melhorar a vida digital de pessoas e empresas.</p>
+        <div class="mt-4 d-flex gap-3 flex-wrap">
+            <a href="#servicos" class="btn-main">Ver Nossos Serviços</a>
+            <a href="https://wa.me/244946923204" target="_blank" class="btn-outline-custom">Falar com Consultor</a>
+        </div>
+    </div>
+</section>
+
+<!-- CARROSSEL -->
+<div class="carousel-modern">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="InGSite/Carrocel/INFORMÁTICA.png" class="d-block w-100 rounded" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="InGSite/Carrocel/" class="d-block w-100 rounded" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="InGSite/" class="d-block w-100 rounded" alt="Slide 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</div>
+
+<!-- SOBRE NÓS -->
+<section class="container mt-5" id="sobre">
+    <h2 class="section-title">Sobre Nós</h2>
+    <div class="row g-4 mt-1">
+        <div class="col-md-6">
+            <div class="sobre-card">
+                Oferecemos setviços e soluções completas em informática, manutenção, otimização, reparações e consultoria técnica profissional. 
+                <br>Também oferecemos formação proficional em informática básica, Resdes de Computadore, Programação Web, Design Gráfico etc. Nossa missão é garantir eficiência, segurança e desempenho para utilizadores domésticos e empresariais.
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="InGSite/abstrato-roxo-fundo-neon-tecnologia-digital-conceito-de-rede-internet(1).jpg.png" class="img-fluid rounded" />
+        </div>
+    </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="container mt-5 text-center">
+    <div class="row g-4">
+        <div class="col-md-4 beneficio">
+            <i class="fa-solid fa-bolt"></i>
+            <h5 class="mt-2 fw-bold">Rapidez</h5>
+            <p>Atendimento rápido e eficiente.</p>
+        </div>
+        <div class="col-md-4 beneficio">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h5 class="mt-2 fw-bold">Confiança</h5>
+            <p>Transparência e segurança garantida.</p>
+        </div>
+        <div class="col-md-4 beneficio">
+            <i class="fa-solid fa-computer"></i>
+            <h5 class="mt-2 fw-bold">Especialização</h5>
+            <p>Técnicos qualificados e experientes.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="container mt-5" id="servicos">
+    <h2 class="section-title">Serviços em Destaque</h2>
+    <div class="row g-4 mt-3">
+
+        <!-- SERVIÇO 1 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/win8.png" style="max-width:80px; max-height:80px;">
+                </div>
+                <h5>Instalação de Sistemas</h5>
+                <p>"Instalação limpa, otimização e configuração"</p>
+                <p><mark>10.000Kzs</mark></p>
+                <a href="https://wa.me/244946923204?text=Quero+instalar+um+sistema" class="btn btn-main mt-auto" target="_blank">Solicitar</a>
+            </div>
+        </div>
+
+        <!-- SERVIÇO 2 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/win8.png" style="max-width:100px; max-height:100px;">
+                </div>
+                <h5>Manutenção Interna</h5>
+                <p>"Limpeza completa e melhora de desempenho"</p>
+                <p> <mark>2.000Kzs</mark></p>
+                <a href="https://wa.me/244946923204?text=Quero+fazer+manutenção" class="btn btn-main mt-auto" target="_blank">Solicitar</a>
+            </div>
+        </div>
+
+        <!-- SERVIÇO 3 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/win8.png" style="max-width:80px; max-height:80px;">
+                </div>
+                <h5>Instalação de Software</h5>
+                <p>"Drivers, programas essenciais e configurações"</p>
+                <p><mark>9.000Kzs</mark></p>
+                <a href="https://wa.me/244946923204?text=Quero+instalar+software" class="btn btn-main mt-auto" target="_blank">Solicitar</a>
+            </div>
+        </div>
+
+        <!-- SERVIÇO 4 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/win8.png" style="max-width:80px; max-height:80px;">
+                </div>
+                <h5>Recuperação de Dados</h5>
+                <p>"Restauração de informações e backups"</p>
+                <p><mark>10.000Kzs</mark></p>
+                <a href="https://wa.me/244946923204?text=Quero+recuperar+dados" class="btn btn-main mt-auto" target="_blank">Solicitar</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PRODUTOS DISPONÍVEIS -->
+    <h2 class="section-title mt-5">Produtos Disponíveis</h2>
+
+    <div class="row g-4 mt-3">
+
+        <!-- PRODUTO 1 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/Serviços/Teclado Sem fio.webp" style="max-width:80px; max-height:80px;">
+                </div>
+                <h5>Teclado Gamer</h5>
+                <p>Teclado RGB completo e resistente.</p>
+                <a href="https://wa.me/244946923204?text=Quero+comprar+um+Teclado+Gamer" class="btn btn-main mt-auto" target="_blank">Comprar</a>
+            </div>
+        </div>
+
+        <!-- PRODUTO 2 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/Serviços/rato-sem-fios-1life-mw-beam-preto-1ifemwbeam.webp" style="max-width:100px; max-height:100px;">
+                </div>
+                <h5>Rato Sem Fios</h5>
+                <p>Controle rápido e confortável.</p>
+                <a href="https://wa.me/244946923204?text=Quero+comprar+um+Rato+Sem+Fios" class="btn btn-main mt-auto" target="_blank">Comprar</a>
+            </div>
+        </div>
+
+        <!-- PRODUTO 3 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/Serviços/Disco Rígido.jpg" style="max-width:80px; max-height:80px;">
+                </div>
+                <h5>Disco Rígido</h5>
+                <p>Armazenamento eficiente e seguro.</p>
+                <a href="https://wa.me/244946923204?text=Quero+comprar+um+Headset+Pro" class="btn btn-main mt-auto" target="_blank">Comprar</a>
+            </div>
+        </div>
+
+        <!-- PRODUTO 4 -->
+        <div class="col-md-3 d-flex">
+            <div class="serv-card w-100 d-flex flex-column align-items-center">
+                <div class="service-img bg-dark p-3 rounded mb-3" style="width:120px; height:120px; display:flex; align-items:center; justify-content:center;">
+                    <img src="InGSite/Serviços/pendriver.jpg" style="max-width:90px; max-height:90px;">
+                </div>
+                <h5>Pen Drive</h5>
+                <p>Armazenamento rápido e seguro.</p>
+                <a href="https://wa.me/244946923204?text=Quero+comprar+um+Pen+Drive+64GB" class="btn btn-main mt-auto" target="_blank">Comprar</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="container text-center mt-5 mb-5">
+    <h2 class="section-title">Contato</h2>
+    <p>Email: katitodanielboalha@gmail.com | Telefone: +244 946 923 204</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 inforStore • Todos os direitos reservados<br />
+    <a href="#">Privacidade</a> •
+    <a href="#">Termos</a> •
+    <a href="#">Contato</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
